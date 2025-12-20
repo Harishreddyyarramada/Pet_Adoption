@@ -100,6 +100,20 @@ Notes:
 - Replace values with your local credentials
 
 --------------------------------------------------
+Database Migrations (Required)
+--------------------------------------------------
+After creating the `.env` file and configuring the database credentials,
+run the following commands to apply migrations:
+```bash
+cd Server/adoption
+python manage.py makemigrations
+python manage.py migrate
+```
+Notes:
+- Migrations must be run before starting the server for the first time
+- This step initializes the database schema
+
+--------------------------------------------------
 Best Practice
 --------------------------------------------------
 This project follows industry standards by excluding virtual environments
