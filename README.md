@@ -38,21 +38,35 @@ Note:
 Backend Setup (Server)
 --------------------------------------------------
 # Open Terminal 2
+
+```bash
 cd Server
+```
 
 # Create virtual environment
+
+```bash
 python -m venv venv
+```
 
 # Activate virtual environment
 # Windows
+
+```bash
 venv\Scripts\activate
+```
 
 # macOS / Linux
+
+```bash
 source venv/bin/activate
+```
 
 # Install backend dependencies
-pip install -r requirements.txt
 
+```bash
+pip install -r requirements.txt
+```
 
 --------------------------------------------------
 Important Notes
