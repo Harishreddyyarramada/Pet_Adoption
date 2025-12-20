@@ -71,13 +71,6 @@ Important Notes
 - Frontend dependencies are listed in package.json
 
 --------------------------------------------------
-Quick Summary
---------------------------------------------------
-```bash
-Frontend: npm install && npm run dev
-Backend : pip install -r requirements.txt && python manage.py runserver
-```
---------------------------------------------------
 Environment Variables (.env)
 --------------------------------------------------
 Create a `.env` file at the following path:
