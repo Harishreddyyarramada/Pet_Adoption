@@ -22,7 +22,7 @@ Frontend Setup (Client)
 --------------------------------------------------
 # Open Terminal 1
 ```bash
-cd client
+cd Client
 npm install
 npm run dev
 ```
@@ -38,7 +38,7 @@ Note:
 Backend Setup (Server)
 --------------------------------------------------
 # Open Terminal 2
-cd server
+cd Server
 
 # Create virtual environment
 python -m venv venv
