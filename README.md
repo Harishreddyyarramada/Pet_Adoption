@@ -53,8 +53,6 @@ source venv/bin/activate
 # Install backend dependencies
 pip install -r requirements.txt
 
-# Backend URL
-http://127.0.0.1:8000/
 
 --------------------------------------------------
 Important Notes
@@ -105,6 +103,8 @@ Notes:
 cd adoption
 python manage.py runserver
 ```
+# Backend URL
+http://127.0.0.1:8000/
 --------------------------------------------------
 Best Practice
 --------------------------------------------------
