@@ -1,19 +1,79 @@
-git clone https://github.com/Harishreddyyarramada/Pet_Adoption.git
+# 🐾 Pet Adoption – Full Stack Project Setup Guide
 
-# 1. To run the Client Side (Frontend)
-# terminal - 1
-cd Pet_Adoption/client
+This document explains how to clone the repository and run both the frontend (client) and backend (server) locally.
+
+--------------------------------------------------
+Prerequisites
+--------------------------------------------------
+- Git
+- Node.js (LTS)
+- Python 3.10+
+- pip (comes with Python)
+
+--------------------------------------------------
+Clone the Repository
+--------------------------------------------------
+git clone https://github.com/Harishreddyyarramada/Pet_Adoption.git
+cd Pet_Adoption
+
+--------------------------------------------------
+Frontend Setup (Client)
+--------------------------------------------------
+# Open Terminal 1
+cd client
 npm install
 npm run dev
 
+# Frontend URL
+http://localhost:5173
 
-# 2. To run the Backend Server
-# new terminal - 2
-cd Pet_Adoption/server
+Note:
+- node_modules is ignored using .gitignore
+- Frontend dependencies are managed via package.json
 
+--------------------------------------------------
+Backend Setup (Server)
+--------------------------------------------------
+# Open Terminal 2
+cd server
+
+# Create virtual environment
 python -m venv venv
+
+# Activate virtual environment
+# Windows
 venv\Scripts\activate
 
+# macOS / Linux
+source venv/bin/activate
+
+# Install backend dependencies
 pip install -r requirements.txt
+
+# Run Django server
 cd adoption
 python manage.py runserver
+
+# Backend URL
+http://127.0.0.1:8000/
+
+--------------------------------------------------
+Important Notes
+--------------------------------------------------
+- venv/, node_modules/, and .env are excluded from Git
+- Each developer must create their own virtual environment
+- Backend dependencies are listed in requirements.txt
+- Frontend dependencies are listed in package.json
+
+--------------------------------------------------
+Quick Summary
+--------------------------------------------------
+Frontend: npm install && npm run dev
+Backend : pip install -r requirements.txt && python manage.py runserver
+
+--------------------------------------------------
+Best Practice
+--------------------------------------------------
+This project follows industry standards by excluding virtual environments
+and dependency folders from version control and using dependency files
+to ensure reproducible setups.
