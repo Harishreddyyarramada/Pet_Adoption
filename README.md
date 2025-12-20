@@ -53,12 +53,6 @@ source venv/bin/activate
 # Install backend dependencies
 pip install -r requirements.txt
 
-# Run Django server
-```bash
-cd adoption
-python manage.py runserver
-```
-
 # Backend URL
 http://127.0.0.1:8000/
 
@@ -106,6 +100,11 @@ Notes:
 - Migrations must be run before starting the server for the first time
 - This step initializes the database schema
 
+# Run Django server
+```bash
+cd adoption
+python manage.py runserver
+```
 --------------------------------------------------
 Best Practice
 --------------------------------------------------
