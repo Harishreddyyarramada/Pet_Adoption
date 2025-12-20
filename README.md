@@ -13,9 +13,10 @@ Prerequisites
 --------------------------------------------------
 Clone the Repository
 --------------------------------------------------
+```bash
 git clone https://github.com/Harishreddyyarramada/Pet_Adoption.git
 cd Pet_Adoption
-
+```
 --------------------------------------------------
 Frontend Setup (Client)
 --------------------------------------------------
