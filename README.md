@@ -77,6 +77,27 @@ Quick Summary
 Frontend: npm install && npm run dev
 Backend : pip install -r requirements.txt && python manage.py runserver
 ```
+--------------------------------------------------
+Environment Variables (.env)
+--------------------------------------------------
+Create a `.env` file at the following path:
+
+Server/adoption/.env
+
+Add the following environment variables:
+
+SECRET_KEY=your-secret-key
+DEBUG=True
+DATABASE_NAME=pet_rescue_db
+DATABASE_USER=root
+DATABASE_PASSWORD=yourpassword
+DATABASE_HOST=localhost
+DATABASE_PORT=3306
+
+Notes:
+- Do NOT commit the `.env` file to GitHub
+- The `.env` file is ignored using `.gitignore`
+- Replace values with your local credentials
 
 --------------------------------------------------
 Best Practice
