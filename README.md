@@ -20,9 +20,11 @@ cd Pet_Adoption
 Frontend Setup (Client)
 --------------------------------------------------
 # Open Terminal 1
+```bash
 cd client
 npm install
 npm run dev
+```
 
 # Frontend URL
 http://localhost:5173
@@ -51,8 +53,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Run Django server
+```bash
 cd adoption
 python manage.py runserver
+```
 
 # Backend URL
 http://127.0.0.1:8000/
@@ -68,8 +72,10 @@ Important Notes
 --------------------------------------------------
 Quick Summary
 --------------------------------------------------
+```bash
 Frontend: npm install && npm run dev
 Backend : pip install -r requirements.txt && python manage.py runserver
+```
 
 --------------------------------------------------
 Best Practice
