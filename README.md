@@ -71,7 +71,6 @@ Server/adoption/.env
 
 Add the following environment variables:
 ```bash
-SECRET_KEY=your-secret-key
 DEBUG=True
 DATABASE_NAME=pet_rescue_db
 DATABASE_USER=root
