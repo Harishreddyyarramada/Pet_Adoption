@@ -5,7 +5,8 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import PetFinder from "./pages/PetFinder.jsx";
-import Home from "./pages/Home.jsx"
+import Home from "./pages/Home.jsx";
+import AdminLogin from "./pages/AdminLogin.jsx";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/pet-finder" element={<PetFinder/>} />
+          <Route path="/admin/login" element={<AdminLogin />} />
         </Routes>
       </BrowserRouter> 
     </>
