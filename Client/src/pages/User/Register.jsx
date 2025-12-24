@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import AuthCard from '../UI/AuthCard';
-import TextInput from '../UI/TextInput';
-import PasswordInput from '../UI/PasswordInput';
+import AuthCard from '../../UI/AuthCard';
+import TextInput from '../../UI/TextInput';
+import PasswordInput from '../../UI/PasswordInput';
 import { useNavigate } from 'react-router-dom';
 const Register = () => {
   const [formData, setFormData] = useState({

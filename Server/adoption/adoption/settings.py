@@ -24,11 +24,6 @@ CORS_ALLOWED_ORIGINS = [
     # Add production host(s) here
 ]
 
-# Alternatively you can use regex to allow any localhost port (use with caution)
-# CORS_ALLOWED_ORIGIN_REGEXES = [
-#     r"^https?://localhost:\d+$",
-#     r"^https?://127\.0\.0\.1:\d+$"
-# ]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -40,6 +35,7 @@ INSTALLED_APPS = [
 
     # your apps
     "Accounts",
+    "pets",
 
     # third party
     "rest_framework",

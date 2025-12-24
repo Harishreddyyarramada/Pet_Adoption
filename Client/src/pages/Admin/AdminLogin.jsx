@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import { ShieldCheckIcon, LockClosedIcon } from "@heroicons/react/24/outline";
-
+import { useNavigate } from "react-router-dom";
 const AdminLogin = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
+  const verifyAndNavigate = (navigate, path) => {
+  if (!localStorage.getItem("isAdmin")) {
+    alert("Login required");
+    navigate("/admin/login");
+    return;
+  }
+  navigate(path);
+};
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,6 +26,7 @@ const AdminLogin = () => {
     e.preventDefault();
     // hook backend logic here
     console.log("Admin login:", formData);
+    navigate("/admin");
   };
 
   return (
@@ -94,7 +104,7 @@ const AdminLogin = () => {
 
           {/* Footer */}
           <div className="mt-6 text-center text-xs text-slate-500">
-            This system is monitored. Unauthorized access is prohibited.
+             Unauthorized access is prohibited.
           </div>
         </div>
       </div>

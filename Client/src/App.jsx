@@ -1,29 +1,13 @@
-import { useState } from "react";
-import "./App.css";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Login from "./pages/Login.jsx";
-import Register from "./pages/Register.jsx";
-import Dashboard from "./pages/Dashboard.jsx";
-import PetFinder from "./pages/PetFinder.jsx";
-import Home from "./pages/Home.jsx";
-import AdminLogin from "./pages/AdminLogin.jsx";
-function App() {
+import { BrowserRouter , Route , Routes } from "react-router-dom";
+import AdminRoutes from "./routes/AdminRoutes";
+import UserRoutes from "./routes/UserRoutes";
+import './App.css';
+
+export default function App() {
   return (
-    <>
-      
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/pet-finder" element={<PetFinder/>} />
-          <Route path="/admin/login" element={<AdminLogin />} />
-        </Routes>
-      </BrowserRouter> 
-    </>
+   <BrowserRouter>
+        <UserRoutes />
+        <AdminRoutes />
+    </BrowserRouter>
   );
 }
-
-export default App;

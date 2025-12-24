@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import AuthCard from "../UI/AuthCard.jsx";
-import TextInput from "../UI/TextInput.jsx";
-import PasswordInput from "../UI/PasswordInput.jsx";
+import AuthCard from "../../UI/AuthCard.jsx";
+import TextInput from "../../UI/TextInput.jsx";
+import PasswordInput from "../../UI/PasswordInput.jsx";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +54,6 @@ const Login = () => {
           password: formData.password,
         }),
       });
-
       const data = await response.json();
       if (!response.ok) {
         setErrors({ general: data?.detail || "Invalid credentials" });
@@ -62,7 +61,7 @@ const Login = () => {
       }
 
       setSuccess("Login successful! Redirecting...");
-      setTimeout(() => navigate("/dashboard"), 2000);
+      setTimeout(() => navigate("/dashboard"), 2000 );
     } catch (err) {
       setErrors({ general: err.message || "Something went wrong" });
     } finally {
@@ -74,7 +73,7 @@ const Login = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex items-center justify-center px-4 py-10">
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
-        {/* LEFT – STORY PANEL (Hidden on Mobile) */}
+        {/* LEFT  */}
         <div className="hidden lg:flex flex-col gap-6">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             <img
