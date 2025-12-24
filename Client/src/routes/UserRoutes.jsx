@@ -15,13 +15,11 @@ export default function UserRoutes() {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
-
-              <Route path="/register" element={<Register />} />
-              <Route path="/dashboard" element={<Dashboard/>} />
-              <Route path="/pet-finder" element={<PetFinder/>} />
-              <Route path="/pet/register" element={<RegisterPet />} />
-              <Route path="/user/pets" element={<ViewPets />} />
-        
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/pet-finder" element={<PetFinder/>} />
+          <Route path="/pet/register" element={<RegisterPet />} />
+          <Route path="/user/pets" element={<ViewPets />} />    
     </Routes>
   );
 }
