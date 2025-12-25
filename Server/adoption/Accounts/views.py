@@ -1,8 +1,27 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import RegisterSerializer, LoginSerializer
+from .serializers import RegisterSerializer, LoginSerializer , AdminLoginSerializer 
 
+class AdminLoginView(APIView):
+    def post(self, request):
+        serializer = AdminLoginSerializer(data=request.data)
+        if serializer.is_valid():
+            admin = serializer.validated_data["admin"]
+            return Response(
+                {
+                    "message": "Admin login successful.",
+                    "admin": {
+                        "id": admin.id,
+                        "username": admin.username,
+                        "email": admin.email,
+                        "role": admin.role,
+                    },
+                },
+                status=status.HTTP_200_OK
+            )
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class RegisterView(APIView):
     def post(self, request):

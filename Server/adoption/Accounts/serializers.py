@@ -1,8 +1,30 @@
 from rest_framework import serializers
 from django.contrib.auth.hashers import make_password, check_password
 from django.db import models
-from .models import AppUser
+from .models import AppUser, AdminUser
+import logging
+logger = logging.getLogger(__name__)
 
+class AdminLoginSerializer(serializers.Serializer):
+    username_or_email = serializers.CharField()
+    password = serializers.CharField(write_only=True)
+
+    def validate(self, data):
+        identifier = data.get('username_or_email')
+        password = data.get('password')
+        try:
+            admin = AdminUser.objects.get(
+                models.Q(username=identifier) | models.Q(email=identifier),
+                is_active=True
+            )
+        except AdminUser.DoesNotExist:
+            raise serializers.ValidationError(" Invalid admin credentials.")
+
+        if not check_password(password, admin.password_hash):
+            raise serializers.ValidationError(" Invalid admin credentials.")
+
+        data['admin'] = admin
+        return data
 
 class RegisterSerializer(serializers.ModelSerializer):
     # accept plain `password` from user, but store hashed in `password_hash`

@@ -1,5 +1,22 @@
 from django.db import models
 
+class AdminUser(models.Model):
+    username = models.CharField(max_length=100, unique=True)
+    email = models.EmailField(max_length=150, unique=True)
+    password_hash = models.CharField(max_length=255)
+    role = models.CharField(
+        max_length=30,
+        default="ADMIN"
+    )
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    class Meta:
+        db_table = 'admins'
+
+    def __str__(self):
+        return self.username
+
 class AppUser(models.Model):  
     username = models.CharField(max_length=100, unique=True)
     email = models.EmailField(max_length=150, unique=True)
