@@ -131,8 +131,7 @@ export default function RegisterPet() {
             bg-white/10 text-white
             border border-white/20
             focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/40
-            outline-none transition"
-        >
+            outline-none transition" >
           <option value="ADOPTION">Adoption</option>
           <option value="LOST">Lost</option>
         </select>
@@ -145,8 +144,7 @@ export default function RegisterPet() {
           className="w-full mb-8 text-sm text-white
             file:bg-emerald-400 file:text-black
             file:border-none file:px-4 file:py-2
-            file:rounded-lg hover:file:bg-emerald-300 transition"
-        />
+            file:rounded-lg hover:file:bg-emerald-300 transition" />
 
         {/* BUTTON */}
         <button
